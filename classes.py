@@ -58,3 +58,37 @@ bankAccount2.withdraw()
 bankAccount2.display_info()
 
 
+class Car:
+    def __init__(self, brand, model, year, fuel_capacity, fuel_level, is_running):
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.fuel_capacity = fuel_capacity
+        self.fuel_level = fuel_level
+        self.is_running = is_running
+
+    def start(self):
+        print(f"{self.brand} starts")
+
+    def stop(self):
+        print(f"{self.brand} stops")
+
+    def refuel(self):
+        print(f"{self.brand} refuels")
+
+    def drive(self):
+        print(f"{self.brand} drives")
+
+    def display_car_info(self):
+        print(f"Car details: {self.brand}, {self.model}, {self.year}, {self.fuel_capacity}, {self.fuel_level}, {self.is_running}")
+
+
+car1 = Car("Chevrolet", "Toyata", 2025, "25L", "5L", True)
+car1.start()
+car1.stop()
+car1.refuel()
+car1.drive()
+car1.display_car_info()
+
+
+
