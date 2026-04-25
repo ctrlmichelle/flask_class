@@ -49,8 +49,8 @@ bankAccount1 = BankAccount("88210", 1000, "Mike", "15-04-2024")
 # bankaccount2 
 bankAccount2 = BankAccount("88211", 500, "Kate", "16-04-2024")
 
-bankAccount1.deposit()
-bankAccount1.withdraw()
+bankAccount1.deposit(1000)
+bankAccount1.withdraw(500)
 bankAccount1.display_info()
 
 bankAccount2.deposit()
