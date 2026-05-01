@@ -142,6 +142,14 @@ cur.execute("insert into products ( name, buying_price, selling_price)values(' a
 conn.commit()
 print(products)
 
+def check_user_exists(email):
+    cur.execute("select exists(select 1 from users where email = %s)",(email,))
+    check_users = cur.fetchone()
+    check_users[0]
+    return check_users[0]
+
+exists = check_user_exists("jones@gmail.com")
+print(exists)
 
 
 
