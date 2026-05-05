@@ -152,4 +152,24 @@ exists = check_user_exists("jones@gmail.com")
 print(exists)
 
 
+def available_stock(pid):
+    cur.execute("select sum(stock_quantity) from stock where pid = %s",(pid,))
+    total_stock = cur.fetchone()[0] or 0
+
+    cur.execute("select sum(quantity) from sales where pid = %s",(pid,))
+    total_sold = cur.fetchone()[0] or 0
+
+    return total_stock - total_sold
+
+check_stock = available_stock(100)
+print(check_stock)
+
+
+square_number = [ i**2 for i in range(1,11)]
+print(square_number)
+
+words = ["apple", "mango", "kiwi", "egg", "cherry", "bread", "me"]
+new_words = [i for i in words if len(i) >= 5]
+print(new_words)
+
 
